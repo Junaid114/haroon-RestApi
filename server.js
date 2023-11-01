@@ -5,8 +5,13 @@
 
 // const PORT = 3001;
 
+// const user={
+//     Name : "haroon",
+//     Last : "Rasheed"
+// }
+
 // server.get('/', (req, res) => {
-//     res.send('harron is here');
+//     res.send(user);
 // });
 
 // server.get('/login',(req,res)=>{
@@ -28,22 +33,30 @@
 // });
 
 
-
-const express = require('express');
-
-const app =express();
-
-const PORT =3000;
+// Example
 
 
+const express = require ('express');
 
-app.get('/',(req,res)=>{
-    res.send('hello chemay')
+const acess = express();
+
+acess.use(express.json());
+
+const PORT = 3000;
+
+// const user = {
+//     Name:"Haroon",
+//     Last:"Rasheed",
+//     Email:"haroonrasheed211f@gmail.com"
+
+// }
+
+
+acess.get('/', (req,res) => {
+    res.send("It's good experience to start backend");
+} )
+
+acess.listen(PORT, ()=> {
+    console.log(`server is running on the port ${PORT}`)
 })
 
-
-
-
-app.listen(PORT,()=>{
-    console.log(`Server is listenin on PORT ${PORT}`)
-})
